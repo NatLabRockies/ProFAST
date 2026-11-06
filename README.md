@@ -1,9 +1,9 @@
 # ProFAST
 The Production Financial Analysis Scenario Tool (ProFAST) is the python version of H2FAST. ProFAST provides a quick and convenient in-depth financial analysis for production systems and services based on Generally Accepted Accounting Principles (GAAP) methodology.
 
-The underlying algorithm used in ProFAST comes from the Excel-based [H2FAST](https://www.nrel.gov/hydrogen/h2fast.html) [SWR-15-06](https://www.osti.gov/biblio/1974438) developed by Michael Penev at the National Laboratory of the Rockies, who also developed the initial code base. Primary development and maintenance of the ProFAST package was performed by Jamie Kee at the National Laboratory of the Rockies. 
+The underlying algorithm used in ProFAST comes from the Excel-based [H2FAST](https://www.nlr.gov/hydrogen/h2fast) [SWR-15-06](https://www.osti.gov/biblio/code-106823) developed by Michael Penev at the National Laboratory of the Rockies, who also developed the initial code base. Primary development and maintenance of the ProFAST package was performed by Jamie Kee at the National Laboratory of the Rockies. 
 
-<img src="https://www.nrel.gov/images/libraries/analysis-images/profast-logo.png?sfvrsn=19764d6a_2" alt="H2FAST Logo" style="width:100px;"/>
+<img src="https://www.nlr.gov/images/libraries/hydrogen-images/h2fast-icon.png?sfvrsn=fbaefec7_1" alt="H2FAST Logo" style="width:100px;"/>
 
 # NOTICE
 [NOTICE.txt](NOTICE.txt)
