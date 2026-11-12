@@ -7,12 +7,13 @@ from ProFAST.tools.utilities import write_yaml, load_yaml, rename_dict_keys
 from ProFAST.tools import convert_pf_to_dict, populate_profast, make_price_breakdown, run_profast
 import matplotlib.pyplot as plt
 import matplotlib as mpl
+from pathlib import Path
 
 class ProFastW(Pro_FAST):
 
     def __init__(self,case=None):
-        if case is not None:
-            if ".yaml" in case:
+        if case is not None :
+            if (isinstance(case,Path) and case.suffix==".yaml") or (isinstance(case,str) and ".yaml" in case):
                 super().__init__(None)
                 self.load_yaml(case)
             else:
@@ -114,11 +115,13 @@ class ProFastW(Pro_FAST):
         self.vals['one time cap inct'].update({'value':sum(itc_vals)})
 
     def load_json(self,case=""):
-        if ".json" in case:
+        if (isinstance(case,Path) and case.suffix==".json"):
+            case = case.with_suffix("")
+        elif (isinstance(case,str) and ".json" in case):
             case = case.replace(".json","")
         self.clear_values("all")
-        if os.path.isfile(case):
-            f = open(case)
+        if os.path.isfile(f"{case}.json"):
+            f = open(f"{case}.json")
         elif os.path.isfile(files("ProFAST.resources").joinpath(f"{case}.json")):
             f = open(files("ProFAST.resources").joinpath(f"{case}.json"))
         else:
@@ -256,5 +259,4 @@ class ProFastW(Pro_FAST):
             plt.close()
 
 
-        []
    
